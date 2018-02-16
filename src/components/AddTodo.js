@@ -9,7 +9,6 @@ const AddTodo = ({dispatch}) => {
       <form onSubmit={ (e)=>{
         e.preventDefault();
         dispatch(addTodo(input.value));
-        console.log(input.value);
         input.value = "";
       } }>
         <input ref={ (node)=>{input = node} } type="text" placeholder="Add Todo"/>

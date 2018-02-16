@@ -19,6 +19,18 @@ const todosReducer = (state=[],action)=>{
       return state.filter(todo=>(todo.id!=action.id));
       break;
     }
+    case "UPDATE_TODO":{
+      return state.map(todo=>{
+        if(todo.id==action.id){
+          return {
+            ...todo,text: action.text
+          }
+        }
+        return todo;
+      }
+    );
+      break;
+    }
     default:
       return state;
   }
