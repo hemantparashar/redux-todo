@@ -1,4 +1,18 @@
-const todosReducer = (state=[],action)=>{
+let i =[
+    {
+        id:535435,
+        text:"sfdsss sd hshsd  erth gs0",
+        completed:false
+    },
+    {
+        id:5353463435,
+        text:"zczxzc3455  sd hshsd  erth gs0",
+        completed:false
+    }
+]
+
+
+const todosReducer = (state=i,action)=>{
   switch(action.type){
     case "ADD_TODO":{
       return [
