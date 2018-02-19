@@ -1,22 +1,20 @@
 import React from 'react';
-import { connect } from 'react-redux';
-import { setVisibilityFilter } from '../actions/index';
-import Link from '../components/Link';
+import FilterLink from '../containers/FilterLink';
+
+let SHOW_ALL       = "SHOW_ALL";
+let SHOW_ACTIVE    = "SHOW_ACTIVE";
+let SHOW_COMPLETED = "SHOW_COMPLETED";
 
 const Footer = ({onClick})=>(
-    <div>
-        <Link onClick={onClick} text="SHOW_ALL">All</Link>
-        <Link onClick={onClick} text="SHOW_ACTIVE">Active</Link>
-        <Link onClick={onClick} text="SHOW_COMPLETED">Completed</Link>
-    </div>
+    <p>
+      Show :
+      {"  "}
+      <FilterLink filter={SHOW_ALL}>All</FilterLink>
+      {"  "}
+      <FilterLink filter={SHOW_ACTIVE}>Active</FilterLink>
+      {"  "}
+      <FilterLink filter={SHOW_COMPLETED}>Completed</FilterLink>
+    </p>
 );
 
-const mapDispatchToProps = (dispatch)=>{
-    return {
-        onClick:(text)=>{
-            dispatch(setVisibilityFilter(text))
-        }
-    }
-}
-
-export default connect(null,mapDispatchToProps)(Footer);
+export default Footer;

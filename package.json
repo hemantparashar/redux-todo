@@ -4,22 +4,24 @@
   "description": "",
   "main": "webpack.config.js",
   "dependencies": {
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "react-redux": "^5.0.6",
+    "redux": "^3.7.2"
+  },
+  "devDependencies": {
     "babel-core": "^6.22.1",
     "babel-loader": "^6.2.10",
     "babel-preset-es2015": "^6.22.0",
     "babel-preset-react": "^6.22.0",
     "babel-preset-stage-2": "^6.24.1",
-    "react": "^16.2.0",
-    "react-dom": "^16.2.0",
-    "react-redux": "^5.0.6",
-    "redux": "^3.7.2",
+    "http-server": "^0.11.1",
+    "redux-logger": "^3.0.6",
     "webpack": "^2.2.1"
   },
-  "devDependencies": {
-    "redux-logger": "^3.0.6"
-  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "setup":"npm install && webpack",
+    "start": "http-server"
   },
   "author": "Hemant Parashar",
   "license": "ISC"

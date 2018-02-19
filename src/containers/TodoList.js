@@ -2,7 +2,6 @@ import TodoList from '../components/TodoList';
 import {connect} from 'react-redux';
 
 const getVisibleTodos = (todos,filter)=>{
-    console.log(todos);
     switch(filter){
         case "SHOW_ALL":
             return todos;
